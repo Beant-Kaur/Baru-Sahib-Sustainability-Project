@@ -1,0 +1,28 @@
+:root {
+    --font-body: "DM Sans", sans-serif;
+    --font-heading: 'DM Serif Display', serif;
+    --font-accent: "Playfair Display", serif;
+    background: #f9f8f5;
+    --font-color: #1D9E75;
+    color: #6b6b65;
+
+}
+
+main {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.eco-heading {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    text-align: center;
+}
+
+.eco-title {
+    font-family: var(--font-body);
+    font-size: 12px;
+    padding: 30px;    
+    color:#1D9E75;
+}
