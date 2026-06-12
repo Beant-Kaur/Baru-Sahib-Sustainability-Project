@@ -86,7 +86,6 @@ nav {
     color: #1d9e75;
     font-size: 42px;
 }
-
 .nav-links {
     display: flex;
     align-items: center;
@@ -146,12 +145,7 @@ nav {
     }
 }
 
-.valley span {
-    font-family: var(--font-heading);
-    font-style: italic;
-    color: #1d9e75;
-    font-size: 42px;
-}
+
 
 hr {
     display: float;

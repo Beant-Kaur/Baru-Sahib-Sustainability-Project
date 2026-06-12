@@ -2,10 +2,11 @@
     --font-body: "DM Sans", sans-serif;
     --font-heading: 'DM Serif Display', serif;
     --font-accent: "Playfair Display", serif;
-    background: #f9f8f5;
-    --font-color: #1D9E75;
-    color: #6b6b65;
-
+    --background: #f9f8f5;
+    --span-color: #1D9E75;
+    --heading-color: #1D9E75;
+    --text-color: #6b6b65;
+    --black-color: rgb(26, 26, 24);
 }
 
 main {
@@ -13,16 +14,44 @@ main {
     padding-right: 30px;
 }
 
+/* page-heading */
 .eco-heading {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     text-align: center;
 }
 
 .eco-title {
     font-family: var(--font-body);
-    font-size: 12px;
-    padding: 30px;    
-    color:#1D9E75;
+    font-size: 14px;
+    padding-top: 30px;
+    color: var(--font-color);
+    text-transform: uppercase;
+}
+
+.main-heading {
+    font-family: var(--font-heading);
+    font-size: 34px;
+    color: var(--black-color);
+    /* letter-spacing: 1px; */
+    font-weight:400
+}
+
+.main-heading span {
+    font-family: var(--font-heading);
+    font-style: italic;
+    color: var(--span-color);
+}
+
+.eco-heading text {
+    font-family: var(--font-body);
+    color: var(--text-color);
+    text-align: center;
+    /* font-weight: 400; */
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    line-height: 1.75;
+    font-weight: 300;
+    max-width: 540px;
+    margin-top:0
 }
