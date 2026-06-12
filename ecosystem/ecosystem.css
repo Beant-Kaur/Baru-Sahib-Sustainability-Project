@@ -6,6 +6,12 @@
     --span-color: #1D9E75;
     --heading-color: #1D9E75;
     --text-color: #6b6b65;
+    --red-color: #E8572A;
+    --green-color: #4CAF50;
+    --mustered-color: #C3B717E8;
+    --seagreen-color: #1D9E75;
+    --yellow-color: #F5A623;
+    --dark-green-color: #0F6E56;
     --black-color: rgb(26, 26, 24);
 }
 
@@ -34,7 +40,7 @@ main {
     font-size: 34px;
     color: var(--black-color);
     /* letter-spacing: 1px; */
-    font-weight:400
+    font-weight: 400
 }
 
 .main-heading span {
@@ -53,5 +59,166 @@ main {
     line-height: 1.75;
     font-weight: 300;
     max-width: 540px;
-    margin-top:0
+    margin-top: 0
 }
+
+.ecosystem-diagram {
+    display: flex;
+    flex-direction: column;
+    width:500px;
+     margin: 0 auto;
+    align-items: center;
+    align-content: center;
+    gap: 2px;    
+}
+
+.diagram-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-start;
+    width: 200px;
+    border: 1px solid #E8572A;
+    border-radius: 30px;
+    padding: 20px;
+    gap: 10px
+}
+
+.diagram-img {
+    height: 30px;
+    width: 30px;
+}
+
+.diagram-layout1 {
+    display: flex;
+    width: 200px;
+    align-items: center;
+    flex-direction: column;
+        align-self: flex-end;
+
+    border: 1px solid var(--green-color);
+    border-radius: 30px;
+    padding: 20px;
+    gap: 10px;
+}
+
+.diagram-layout2 {
+    display: flex;
+    width: 200px;
+    align-items: center;
+    flex-direction: column;
+        align-self: flex-start;
+
+    border: 1px solid var(--mustered-color);
+    border-radius: 30px;
+    padding: 20px;
+    gap: 10px
+}
+
+.diagram-layout3 {
+    display: flex;
+    width: 200px;
+    align-items: center;
+    flex-direction: column;
+        align-self: flex-end;
+
+    border: 1px solid var(--span-color);
+    border-radius: 30px;
+    padding: 20px;
+    gap: 10px
+}
+
+.diagram-layout4 {
+    display: flex;
+    width: 200px;
+    align-items: center;
+    flex-direction: column;
+        align-self: flex-start;
+
+    border: 1px solid var(--yellow-color);
+    border-radius: 30px;
+    padding: 20px;
+    gap: 10px
+}
+
+.diagram-layout5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        align-self: flex-end;
+
+    width: 200px;
+    border: 1px solid var(--dark-green-color);
+    border-radius: 30px;
+    padding: 20px;
+    gap: 10px
+}
+
+.node {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    align-items: center;
+
+}
+
+.node h3 {
+    font-size: 14px;
+    font-family: var(--font-heading);
+    font-style: italic;
+    margin: 0;
+    color: #E8572A;
+}
+
+
+.node p {
+    font-size: 12px;
+    text-align: center;
+    align-items: center;
+    text-align: center;
+}
+
+.node .canopy {
+    font-size: 14px;
+    font-family: var(--font-heading);
+    font-style: italic;
+    margin: 0;
+    color: var(--green-color)
+}
+
+.node .edu {
+    font-size: 14px;
+    font-family: var(--font-heading);
+    font-style: italic;
+    margin: 0;
+    color: var(--mustered-color)
+}
+
+.node .AI {
+    font-size: 14px;
+    font-family: var(--font-heading);
+    font-style: italic;
+    margin: 0;
+    color: var(--seagreen-color)
+}
+
+.node .zero-waste {
+    font-size: 14px;
+    font-family: var(--font-heading);
+    font-style: italic;
+    margin: 0;
+    color: var(--yellow-color)
+}
+
+.node .future-labs {
+    font-size: 14px;
+    font-family: var(--font-heading);
+    font-style: italic;
+    margin: 0;
+    color: var(--dark-green-color)
+}
+
+/* display: flex;
+flex-direction: column;
+gap: 10px; */
