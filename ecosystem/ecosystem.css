@@ -27,7 +27,7 @@ main {
     text-align: center;
 }
 
-.eco-title {
+.title {
     font-family: var(--font-body);
     font-size: 14px;
     padding-top: 30px;
@@ -49,7 +49,7 @@ main {
     color: var(--span-color);
 }
 
-.eco-heading text {
+.heading text {
     font-family: var(--font-body);
     color: var(--text-color);
     text-align: center;
@@ -65,11 +65,11 @@ main {
 .ecosystem-diagram {
     display: flex;
     flex-direction: column;
-    width:500px;
-     margin: 0 auto;
+    width: 500px;
+    margin: 0 auto;
     align-items: center;
     align-content: center;
-    gap: 2px;    
+    gap: 2px;
 }
 
 .diagram-layout {
@@ -83,6 +83,9 @@ main {
     padding: 20px;
     gap: 10px
 }
+.diagram-layout:hover{
+    box-shadow: 0px 2px 2px #E8572A;
+}
 
 .diagram-img {
     height: 30px;
@@ -94,12 +97,14 @@ main {
     width: 200px;
     align-items: center;
     flex-direction: column;
-        align-self: flex-end;
-
+    align-self: flex-end;
     border: 1px solid var(--green-color);
     border-radius: 30px;
     padding: 20px;
     gap: 10px;
+}
+.diagram-layout1:hover{
+    box-shadow: 0px 2px 2px var(--green-color);
 }
 
 .diagram-layout2 {
@@ -107,12 +112,14 @@ main {
     width: 200px;
     align-items: center;
     flex-direction: column;
-        align-self: flex-start;
-
-    border: 1px solid var(--mustered-color);
+    align-self: flex-start;
+    border: 1px solid #0C3156;
     border-radius: 30px;
     padding: 20px;
     gap: 10px
+}
+.diagram-layout2:hover{
+    box-shadow: 0px 2px 2px #0C3156;
 }
 
 .diagram-layout3 {
@@ -120,38 +127,43 @@ main {
     width: 200px;
     align-items: center;
     flex-direction: column;
-        align-self: flex-end;
-
+    align-self: flex-end;
     border: 1px solid var(--span-color);
     border-radius: 30px;
     padding: 20px;
     gap: 10px
 }
-
+.diagram-layout3:hover{
+    box-shadow: 0px 2px 2px var(--span-color);
+}
 .diagram-layout4 {
     display: flex;
     width: 200px;
     align-items: center;
     flex-direction: column;
-        align-self: flex-start;
-
+    align-self: flex-start;
     border: 1px solid var(--yellow-color);
     border-radius: 30px;
     padding: 20px;
     gap: 10px
+}
+.diagram-layout4:hover{
+    box-shadow: 0px 2px 2px var(--yellow-color);
 }
 
 .diagram-layout5 {
     display: flex;
     flex-direction: column;
     align-items: center;
-        align-self: flex-end;
-
+    align-self: flex-end;
     width: 200px;
     border: 1px solid var(--dark-green-color);
     border-radius: 30px;
     padding: 20px;
     gap: 10px
+}
+.diagram-layout5:hover{
+    box-shadow: 0px 2px 2px var(--dark-green-color);
 }
 
 .node {
@@ -170,7 +182,9 @@ main {
     margin: 0;
     color: #E8572A;
 }
-
+.diagram-layout:hover{
+    box-shadow: 0px 2px 2px #E8572A;
+}
 
 .node p {
     font-size: 12px;
@@ -192,7 +206,7 @@ main {
     font-family: var(--font-heading);
     font-style: italic;
     margin: 0;
-    color: var(--mustered-color)
+    color: #0C3156
 }
 
 .node .AI {
@@ -217,8 +231,80 @@ main {
     font-style: italic;
     margin: 0;
     color: var(--dark-green-color)
+    
 }
 
-/* display: flex;
-flex-direction: column;
-gap: 10px; */
+.quote-band {
+    background: #fff;
+    border-top: 0.5px solid #d8d6cf;
+    border-bottom: 0.5px solid #d8d6cf;
+    padding: 20px 30px;
+    text-align: center;
+}
+
+.quote-text {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    font-style: italic;
+    color: var(--text-color);
+    line-height: 1.7;
+    max-width: 600px;
+    letter-spacing: .1px;
+    margin: 0 auto;
+}
+
+/* 
+.Achievements {
+    display: flex;
+    flex-direction: row;
+} */
+.Achievement-items {
+    display: flex;
+    flex-direction: row;
+    gap:px;
+    justify-content: center;
+    padding:10px
+}
+
+.card-layout {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    border: 1px solid var(--font-color);
+    border-radius: 30px;
+    /* margin-left:2px;  */
+    box-shadow: 0px 4px 4px var(--font-color);
+}
+.card-img1{
+    padding:20px
+
+}
+
+.card-layout:hover {
+    box-shadow: 0px 8px 20px rgba(97, 155, 138, 0.3);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    align-items: center;
+}
+
+.card h3 {
+    font-size: 14px;
+    font-family: var(--font-heading);
+    font-style: italic;
+    color: var(--font-color);
+    margin: 0;
+    text-align: center
+}
+
+.card p {
+    font-size: 12px;
+    text-align: center;
+    align-items: center;
+    text-align: center;
+}
+
