@@ -83,7 +83,8 @@ main {
     padding: 20px;
     gap: 10px
 }
-.diagram-layout:hover{
+
+.diagram-layout:hover {
     box-shadow: 0px 2px 2px #E8572A;
 }
 
@@ -103,7 +104,8 @@ main {
     padding: 20px;
     gap: 10px;
 }
-.diagram-layout1:hover{
+
+.diagram-layout1:hover {
     box-shadow: 0px 2px 2px var(--green-color);
 }
 
@@ -118,7 +120,8 @@ main {
     padding: 20px;
     gap: 10px
 }
-.diagram-layout2:hover{
+
+.diagram-layout2:hover {
     box-shadow: 0px 2px 2px #0C3156;
 }
 
@@ -133,9 +136,11 @@ main {
     padding: 20px;
     gap: 10px
 }
-.diagram-layout3:hover{
+
+.diagram-layout3:hover {
     box-shadow: 0px 2px 2px var(--span-color);
 }
+
 .diagram-layout4 {
     display: flex;
     width: 200px;
@@ -147,7 +152,8 @@ main {
     padding: 20px;
     gap: 10px
 }
-.diagram-layout4:hover{
+
+.diagram-layout4:hover {
     box-shadow: 0px 2px 2px var(--yellow-color);
 }
 
@@ -162,7 +168,8 @@ main {
     padding: 20px;
     gap: 10px
 }
-.diagram-layout5:hover{
+
+.diagram-layout5:hover {
     box-shadow: 0px 2px 2px var(--dark-green-color);
 }
 
@@ -182,7 +189,8 @@ main {
     margin: 0;
     color: #E8572A;
 }
-.diagram-layout:hover{
+
+.diagram-layout:hover {
     box-shadow: 0px 2px 2px #E8572A;
 }
 
@@ -231,7 +239,6 @@ main {
     font-style: italic;
     margin: 0;
     color: var(--dark-green-color)
-    
 }
 
 .quote-band {
@@ -261,24 +268,36 @@ main {
 .Achievement-items {
     display: flex;
     flex-direction: row;
-    gap:px;
+    gap: 50px;
     justify-content: center;
-    padding:10px
+    padding: 10px
 }
 
 .card-layout {
     display: flex;
     flex-direction: column;
-    width: 250px;
+    justify-content: center;
+    align-items: center;
+    width: 230px;
     border: 1px solid var(--font-color);
     border-radius: 30px;
     /* margin-left:2px;  */
     box-shadow: 0px 4px 4px var(--font-color);
 }
-.card-img1{
-    padding:20px
 
+.card-img1 {
+    max-width: 120px;
+    max-height: 120px;
+    padding: 2rem;
 }
+
+.card-img {
+    max-width: 120px;
+    max-height: 120px;
+    padding: 2rem;
+}
+
+
 
 .card-layout:hover {
     box-shadow: 0px 8px 20px rgba(97, 155, 138, 0.3);
@@ -306,5 +325,91 @@ main {
     text-align: center;
     align-items: center;
     text-align: center;
+    padding: 1rem;
 }
 
+/* stories */
+.story-cards-layout{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    gap:40px;
+
+
+}
+.stories {
+    display: flex;
+    flex-direction: row;
+    
+    padding: 30px;
+}
+
+.story-layout {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: 1px solid var(--red-color);
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px var(--red-color);
+    gap: 10px;
+}
+
+.card {
+    gap: 1px;
+}
+
+.text1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.heading {
+    color: var(--red-color);
+    background: rgb(233, 225, 225);
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    margin:10px
+}
+
+.story-card-img {
+    border-radius: 30px;
+    height: 25vh;
+    padding: 10px;
+    object-fit: cover;
+
+}
+
+#heading {
+    color: #E8572A;
+    font-style: normal;
+    font-family: var(--font-body);
+    justify-content: center;
+}
+
+.story-sub-heading {
+    color: var(--black-color);
+    font-family: var(--font-body);
+}
+
+#p1 {
+    color: var(--black-color);
+    padding: 10px
+}
+
+#read-more {
+    display: flex;
+    justify-items: left;
+    align-content: start;
+    margin-bottom: 5px;
+}
+#explore-btn{
+    display: block;
+    width: fit-content;
+    margin: 2rem auto;
+
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
