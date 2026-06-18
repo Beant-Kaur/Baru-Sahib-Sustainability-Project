@@ -2,24 +2,9 @@
     --font-body: "DM Sans", sans-serif;
     --font-heading: 'DM Serif Display', serif;
     --font-accent: "Playfair Display", serif;
-    --fs-heading: 16px;
-    --fs-main-heading: 36px;
-    --main-heading-color: #1a1a18;
-    --fs-subheading: 14px;
-    --fs-body: 16px;
+    background: #f9f8f5;
     --font-color: #1D9E75;
     color: #6b6b65;
-    background: #f9f8f5;
-    --span-color: #1D9E75;
-    --heading-color: #1D9E75;
-    --text-color: #666;
-    --red-color: #E8572A;
-    --green-color: #4CAF50;
-    --mustered-color: #C3B717E8;
-    --seagreen-color: #1D9E75;
-    --yellow-color: #F5A623;
-    --dark-green-color: #0F6E56;
-    --black-color: rgb(26, 26, 24);
 
 }
 
@@ -29,11 +14,11 @@ nav {
     align-items: center;
     font-family: var(--font-body);
     font-weight: medium;
-    font-size: var(--fs-subheading);
+    font-size: 12px;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 40px;
+    padding-top:40px;
     box-sizing: border-box;
 }
 
@@ -44,7 +29,7 @@ nav {
 }
 
 .logo h3 {
-    font-size: var(--fs-subheading);
+    font-size: 14px;
     font-weight: 500;
     color: #1a1a18;
     letter-spacing: -0.01em;
@@ -56,7 +41,7 @@ nav {
 }
 
 .address {
-    font-size: 16px;
+    font-size: 12px;
     font-family: var(--font-body);
     font-weight: 500;
     letter-spacing: 0.1em;
@@ -71,20 +56,18 @@ nav {
 p {
 
     font-family: var(--font-body);
-    color: var(--text-color);
 }
 
 .p p {
     font-family: var(--font-body);
     margin-top: 50px;
-    font-size: 16px;
+    font-size: 15px;
 
 }
 
 .mapImage {
     width: 14px;
     height: 14px;
-    padding-top: 16px
 }
 
 .map {
@@ -103,26 +86,25 @@ p {
     color: #1d9e75;
     font-size: 42px;
 }
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:80px;
 }
 
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:32px;
+    list-style:none;
+    margin:0;
+    padding:0;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-color);
+    color: #6b6b65;
     font-family: var(--font-body);
     font-size: 13px;
     letter-spacing: 0.01em;
@@ -261,7 +243,7 @@ nav {
 .pillar-text {
     font-family: var(--font-body);
     font-size: 13px;
-    color: var(--text-color);
+    color: #1a1a18;
     font-weight: 500;
     line-height: 0;
 
@@ -269,7 +251,7 @@ nav {
 
 .pillar-sub {
     font-size: 11px;
-    color: var(--text-color);
+    color: #9b9b93;
     margin-top: 1px;
 }
 
@@ -294,7 +276,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 20px;
-    font-family: Var(--font-body);
+    font-family: VAR(--font-body);
 }
 
 .card2 {
@@ -358,7 +340,7 @@ nav {
     border-bottom: 0.5px solid #d8d6cf;
     background-color: #ffffff;
     /* margin-top: 30px; */
-    padding: 20px;
+    padding:0px;
     widht
 }
 
@@ -368,7 +350,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     gap: 50px;
-    padding: 0px;
+    padding: opx
 }
 
 .metric-items {
@@ -380,205 +362,22 @@ nav {
     justify-content: center;
     color: #1a1a18;
     white-space: nowrap;
-    padding: 0px;
+    padding:0px
 }
 
+
 .metric-labels {
+    font-size: 12px;
     font-family: var(--font-body);
     align-items: center;
     text-align: center;
 }
 
 .hero,
-explore-portal,
+.metrics,
 .ecosystem,
 .achievements,
 .Stories {
-    padding-top: 20px;
-    padding-bottom: 30px;
-}
-
-/* Explore Section */
-.section {
-    padding: 50px 0;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.section-eyebrow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 8px;
-}
-
-.section-eyebrow span {
-    width: 40px;
-    height: 2px;
-    background-color: #619B8A;
-}
-
-.eyebrow p {
-    color: var(--span-color);
-    font-size: 12px;
-    letter-spacing: 3px;
-    font-weight: 600;
-    padding: 0;
-    margin: 0px
-}
-
-.section-heading {
-    font-family: var(--font-heading);
-    font-size: var(--fs-main-heading);
-    line-height: 1.1;
-    color: var(--main-heading-color);
-    font-weight: 400;
-    margin-top: 0;
-}
-
-h1 span {
-    font-family: var(--font-heading);
-    font-style: italic;
-    color: #1d9e75;
-    font-size: 42px;
-}
-
-.section-subheading {
-    max-width: 600px;
-    margin: auto;
-    font-size: 16px;
-    line-height: 1.8;
-    color: #666;
-}
-
-/* portal-cards */
-.portal-cards {
-    display: grid;
-    flex-direction: row;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    margin-top: 6%
-}
-
-.portal-card {
-    display: flex;
-    flex-direction: column;
-    background: #ffffff;
-    border: 1px solid rgba(35, 61, 77, 0.08);
-    border-radius: 24px;
-    overflow: hidden;
-    width: 100%;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(35, 61, 77, 0.05);
-}
-
-.portal-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(35, 61, 77, 0.12);
-}
-
-
-.card-banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 180px;
-}
-
-.ecosystem-banner {
-    background: rgba(161, 193, 129, 0.30);
-}
-
-.stories-banner {
-    background: rgba(252, 204, 70, 0.30);
-    overflow: hidden;
-}
-
-.network-banner {
-    background: rgba(97, 155, 138, 0.25);
-}
-
-.story-img {
-    height: 40%
-}
-
-.card-tag {
-    border: 1px solid rgba(35, 61, 77, 0.08);
-    border-radius: 24px;
-    background: rgba(161, 193, 129, 0.30);
-    text-align: start;
-    padding-left: 30px;
-    font-weight: 500
-}
-#ECOSYSTEM {
-    color: var(--span-color);
-}
-
-#STORIES {
-    color: var(--red-color);
-}
-#NETWORK{
-    color:var(--dark-green-color);
-}
-.card-content {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    padding: 30px;
-    font-family: var(--font-body);
-}
-
-.card-content p {
-    font-family: var(--font-body);
-    line-height: 1.8;
-    color: var(--text-color);
-    flex-grow: 1;
-    /* margin-bottom: 20px;
-    padding-bottom: 10px; */
-}
-
-.card-btn {
-    display: inline-flex;
-    font-family: var(--font-body);
-    align-items: center;
-    align-self: flex-start;
-    gap: 8px;
-    text-decoration: none;
-    padding: 14px 24px;
-    border-radius: 999px;
-    background: #619B8A;
-    color: white;
-    font-size: var(--fs-body);
-    font-weight: 600;
-    transition: all 0.3s ease;
-    margin-top: auto;
-
-}
-#explore-id{
-    margin:5%;
-}
-
-.card-btn:hover {
-    background: #4f8574;
-}
-
-/* Secondary Button */
-
-.secondary-btn {
-    background: transparent;
-
-    border: 2px solid #233D4D;
-
-    color: #233D4D;
-}
-
-.secondary-btn:hover {
-    background: #233D4D;
-
-    color: white;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
