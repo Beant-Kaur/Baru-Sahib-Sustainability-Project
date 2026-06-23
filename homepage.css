@@ -35,15 +35,21 @@ body {
 }
 
 nav {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-family: var(--font-body);
     font-weight: medium;
-    font-size: var(--fs-subheading);
+    font-size: var(--fs-heading);
     width: 100%;
     margin: 0 auto;
-    padding-top: 20px;
+    padding: 10px;
     box-sizing: border-box;
 }
 
@@ -76,11 +82,12 @@ nav {
     display: flex;
     align-items: center;
     gap: 6px;
-    margin: 0px
+    margin-top: 38px
 }
 
 p {
     font-family: var(--font-body);
+    font-size: var(--fs-subheading);
     color: var(--text-color);
 }
 
@@ -94,13 +101,14 @@ p {
 .mapImage {
     width: 14px;
     height: 14px;
-    padding-top: 16px
+    margin-top: 2px
 }
 
 .map {
     display: flex;
     align-items: center;
     gap: 6px;
+    padding-top:60px;
 }
 
 .valley {
@@ -114,14 +122,6 @@ p {
     font-size: 46px;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
-    padding: 20px
-}
-
 .menu-btn {
     display: none;
     font-size: 16px;
@@ -131,7 +131,7 @@ nav {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 60px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -143,7 +143,7 @@ nav {
     text-decoration: none;
     color: var(--text-color);
     font-family: var(--font-body);
-    font-size: 13px;
+    font-size: var(--fs-subheading);
     letter-spacing: 0.01em;
 }
 
@@ -163,6 +163,7 @@ nav {
     text-decoration: none;
     font-weight: 600;
     transition: 0.3s ease;
+    margin-right: 10px
 }
 
 .menu-btn {
@@ -210,6 +211,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     gap: 12px;
+    padding-top: 50px;
     /* margin-top: 10px; */
     background: #f9f8f5;
 }
@@ -444,12 +446,12 @@ explore-portal,
 /* .section {
     padding: 10px;
 } */
-
+/* 
 @media (max-width:768px) {
     .section {
-        padding: 60px 0;
+        padding: 40px 0;
     }
-}
+} */
 
 .section-title {
     text-align: center;
@@ -499,6 +501,7 @@ h1 span {
 }
 
 .section-subheading {
+    font-size: var(--fs-subheading);
     max-width: 600px;
     margin: auto;
     font-size: 16px;
@@ -530,9 +533,9 @@ h1 span {
 .portal-cards1 {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns:repeat(3, 1fr);
     gap: 20px;
-    margin: 30px;
+    margin: 10px;
     /* margin-top: 6%; */
     padding: 20px
 }
@@ -618,6 +621,7 @@ h1 span {
 
 .card-content p {
     font-family: var(--font-body);
+    font-size: var(--fs-subheading);
     line-height: 1.4;
     color: var(--text-color);
     /* margin-bottom: 20px;
@@ -706,6 +710,7 @@ h1 span {
 
 .achievement-content p {
     font-family: var(--font-body);
+    font-size: var(--fs-subheading);
     line-height: 1.8;
     color: var(--text-color);
     flex-grow: 1;
@@ -875,7 +880,7 @@ h1 span {
 .card-content p,
 .card-content1 p {
     font-family: var(--font-body);
-    font-size: 15px;
+    font-size: var(--fs-subheading);
     line-height: 1.6;
     color: #666;
     margin-top: 0;
@@ -911,6 +916,16 @@ h1 span {
     .main-page-project-cards {
         grid-template-columns: 1fr;
     }
+}
+
+
+.quote-band {
+    background: #fff;
+    border-top: 0.5px solid #d8d6cf;
+    border-bottom: 0.5px solid #d8d6cf;
+    padding: 20px 30px;
+    text-align: center;
+    margin-top: 50px;
 }
 
 /* Partnership */
@@ -1010,12 +1025,6 @@ h1 span {
 }
 
 /* 2 */
-
-.tier2 {
-    color: var(--white);
-    background: black;
-}
-
 /* for black to white text */
 .partnership-card:hover h3,
 .partnership-card:hover p,
@@ -1084,13 +1093,13 @@ h1 span {
 
 .footer-brand-name {
     font-family: var(--font-heading);
-    font-size: 1.3rem;
+    font-size: var(--fs-subheading);
     color: var(--white-color);
     margin-bottom: 8px;
 }
 
 .footer-brand-sub {
-    font-size: 0.72rem;
+    font-size:var(--fs-subheading);
     letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 14px;
@@ -1098,19 +1107,19 @@ h1 span {
 
 .footer-brand-desc {
     color: var(--white-color);
-    font-size: 0.82rem;
+    font-size:var(--fs-subheading);
     line-height: 1.7;
     max-width: 280px;
 }
 
 .footer-col h4 {
-    font-size: 0.72rem;
+    font-size: var(--fs-subheading);
     font-weight: 600;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--white-color);
-    margin-bottom: 16px;
-    margin-left: 36px
+    /* margin-left: 36px; */
+    margin-bottom:16px
 }
 
 .footer-col ul {
@@ -1124,7 +1133,7 @@ h1 span {
 }
 
 .footer-col ul li a {
-    font-size: 0.82rem;
+    font-size: var(--fs-subheading);
     color: var(--white-color);
 }
 
@@ -1139,7 +1148,7 @@ h1 span {
     gap: 500px;
     margin-left: 40px;
     align-items: center;
-    font-size: 0.75rem;
+    font-size: var(--fs-subheading);
     color: var(--white-color);
 
 }
@@ -1147,7 +1156,7 @@ h1 span {
 .footer-sdg-badge {
     display: flex;
     align-items: center;
-    font-size: 0.72rem;
+    font-sizevar:var(--fs-subheading);
     color: var(--white-color);
 }
 
