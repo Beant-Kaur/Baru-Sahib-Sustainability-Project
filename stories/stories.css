@@ -59,9 +59,6 @@ p {
     padding: 0 20px;
 }
 
-.section {
-    padding-top: ;
-}
 
 .section-title {
     text-align: center;
@@ -130,7 +127,7 @@ h1 span,
     border: 1.5px solid var(--border);
     border-radius: 0 30px;
     transition: transform .1s ease;
-}
+   }
 
 .central-story:hover {
     transform: translateY(-4px);
@@ -139,15 +136,34 @@ h1 span,
 }
 
 .main-story {
+    height:150px;
     line-height: 1.1rem;
     padding: 0px 30px;
     text-align: center;
     margin: 0
 }
+.main-story h1{
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    line-height: 1.1;
+    color: var(--main-heading-color);
+    font-weight: 400;
+    margin: 0;
+}
+
+.main-story .section-subheading {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: var(--fs-sm);
+    line-height: 1.8;
+    color: #666;
+    font-family: var(--font-body);
+    margin:0
+}
 
 img {
     width: 100%;
-    height: 412px;
+    height: 325px;
     border-radius: 0 30px;
     object-fit: cover;
     margin: 0
@@ -181,36 +197,87 @@ img {
     color: white;
 }
 
+.impact-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 50px;
+    padding: 10px;
+    background: white;
+    border: 1px solid var(--border);
+    text-align: center;
+}
+
+sup {
+    color: orange;
+}
+
+.impact-strip h3 {
+    margin: 0;
+    color: var(--black-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--font-body);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.impact-strip div:hover h3 {
+    transform: scale(1.15);
+    color: var(--dark-green-color);
+}
+
+.impact-strip p {
+    margin-top: 0;
+    font-size: var(--fs-sm);
+    color: var(--text-color);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+
 .stories-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 30px;
-    border: 2px solid red
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    padding-bottom: 3px;
+    margin-top:30px
+    /* padding-bottom:  */
 }
 
 .story-card {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 2px;
-    border-radius: 30px;
-    /* padding:20px; */
-
+    /* height: 100%; */
+    border: 1.5px solid var(--border);
+    border-radius: 0 30px;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    position: relative;
+    overflow: hidden
 }
 
-.tags {
-    display: inline-flex;
-    flex-direction: row;
-    gap: 20px;
-    margin: 10px 0;
+.small-story-img img {
+    width: 100%;
+    height: 176px;
+    border-radius: 0 30px;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.story-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 250px;
+    flex: 1;
+    padding: 0 30px 30px;
 }
 
 .tag1 {
     display: inline-flex;
     align-items: flex-start;
     gap: 5px;
-    font-size: 0.63rem;
+    font-size: 0.45rem;
     font-family: var(--font-body);
     text-transform: uppercase;
     font-weight: 600;
@@ -220,31 +287,132 @@ img {
     padding: 0 20px;
 }
 
-.small-story-img img {
-    width: 100%;
-    height: auto;
-    border-radius: 30px;
-    object-fit: cover;
-    margin: 0;
-    padding: 0;
+.story-card-content p {
+    font-family: var(--font-body);
+    font-size: var(--fs-s);
+    margin-bottom: 0;
 }
 
-.story-card {
-    background: var(--background);
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
-    position: relative;
-    overflow: hidden;
-}
-.story-card p {
-    font-family: var(--font-body);
-    font-size: var(--)
-}
-.healthcare h1 {
+.story-card-content h1 {
     font-family: var(--font-heading);
     font-style: italic;
     color: var(--black-color);
-    font-size: 36px;
+    /* font-size: 12px; */
+    margin: 2px;
+    font-weight: 500
+}
+
+.story-card-content a {
+    margin: 30px 6px
+}
+
+.story-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 30px;
+}
+
+
+/* Tags Styling */
+.tags {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 10px 0;
+}
+
+.healthcare .tag1 {
+    background: #E8EDF2;
+    color: rgb(8, 8, 177);
+}
+
+.Solar .tag1 {
+    background: rgb(245, 245, 176);
+    color: var(--dark-green-color);
+}
+
+
+.story-card-content p {
+    font-family: var(--font-body);
+    font-size: .65rem;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.story-card-content h1 {
+    font-family: var(--font-heading);
+    font-style: italic;
+    color: var(--black-color);
+    font-size: var(--fs-lg);
+    margin: 2px;
+    font-weight: 500;
+}
+
+.story-card-content .btn-explore {
+    margin: 10px 6px;
+    padding: 10px;
+    font-size: 10px
+        /* width:150px */
+}
+
+.story-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-10px);
+}
+
+.story-card::before {
+    background: var(--span-color);
+}
+
+.story-card:hover {
+    border: 0.3px solid var(--span-color);
+    box-shadow: 0 0.5px 2px var(--span-color);
+}
+
+.story-card:hover::before {
+    transform: scaleY(1);
+}
+
+.story-card.healthcare::before {
+    background: rgb(8, 8, 177);
+}
+
+.story-card.healthcare:hover {
+    border: 0.3px solid rgb(8, 8, 177);
+    box-shadow: 0 0.5px 2px rgb(8, 8, 177);
+}
+
+.story-card.healthcare:hover::before {
+    transform: scaleY(1);
+}
+
+.story-card.Solar::before {
+    background: var(--yellow-color);
+}
+
+.story-card.Solar:hover {
+    border: 0.3px solid var(--yellow-color);
+    box-shadow: 0 0.5px 2px var(--yellow-color);
+}
+
+.story-card.Solar:hover::before {
+    transform: scaleY(1);
+}
+
+.explore-more {
+    display: flex;
+    justify-content: center;
+    flex-direction:row;
 }

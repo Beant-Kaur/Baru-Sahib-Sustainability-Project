@@ -127,3 +127,90 @@ nav {
         display: none;
     }
 }
+/* Footer */
+.site-footer {
+    background: var(--span-color);
+    padding: 28px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 48px;
+    color: var(--white-color);
+    margin-left: 40px;
+    /* margin-bottom: 32px; */
+}
+
+.footer-brand-name {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--white-color);
+    margin-bottom: 8px;
+}
+
+.footer-brand-sub {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    color: var(--white-color);
+}
+
+.footer-brand-desc {
+    color: var(--white-color);
+    font-size: 0.82rem;
+    line-height: 1.7;
+    max-width: 280px;
+    margin: 0;
+}
+
+.footer-col h4 {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--white-color);
+    margin-bottom: 16px;
+    /* margin-left: 36px */
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 0.82rem;
+    color: var(--white-color);
+    text-decoration: none;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+
+.footer-col ul li a:hover {
+    opacity: 1;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    /* fixed: was gap: 500px which broke on small screens */
+    align-items: center;
+    font-size: 0.75rem;
+    color: var(--white-color);
+}
+
+.footer-sdg-badge {
+    display: flex;
+    align-items: center;
+    font-size: 0.72rem;
+    color: var(--white-color);
+}
