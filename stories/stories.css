@@ -90,7 +90,6 @@ p {
     margin: 0;
     font-family: var(--font-body);
 }
-
 .section-heading {
     font-family: var(--font-heading);
     font-size: var(--fs-main-heading);

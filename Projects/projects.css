@@ -1,0 +1,128 @@
+:root {
+    --font-body: "DM Sans", sans-serif;
+    --font-heading: 'DM Serif Display', serif;
+    --fs-heading: 16px;
+    --fs-main-heading: 36px;
+    --fs-subheading: 14px;
+    --fs-body: 16px;
+    --main-heading-color: #1a1a18;
+    --font-color: #1D9E75;
+    --border: #E2EBDF;
+    --span-color: #1D9E75;
+    --heading-color: #1D9E75;
+    --text-color: #666;
+    --red-color: #E8572A;
+    --green-color: #4CAF50;
+    --mustered-color: #C3B717E8;
+    --seagreen-color: #1D9E75;
+    --yellow-color: #F5A623;
+    --dark-green-color: #0F6E56;
+    --black-color: rgb(26, 26, 24);
+    --white: rgba(255, 255, 255, 0.6);
+    --white-color: white;
+    --background: #fff;
+    --fs-s: 11px;
+    --fs-sm: 14px;
+    --fs-md: 15px;
+    --fs-xs: 12px;
+    --fs-xxl: 46px;
+    --fs-lg: 18px;
+
+
+}
+
+html {
+    font-family: var(--font-body);
+}
+
+body {
+    font-size: var(--fs-body);
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+    background: #f9f8f5;
+    color: #6b6b65;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.network-section {
+    max-width: 1400px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.network{
+    Display:flex;
+    flex-direction: row;
+}
+.network-diagram {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top:8%
+}
+
+.section-eyebrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.section-eyebrow span {
+    width: 40px;
+    height: 2px;
+    background-color: #619B8A;
+    display: block;
+}
+
+.section-eyebrow p {
+    color: var(--span-color);
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-body);
+}
+
+.section-heading {
+    font-family: var(--font-heading);
+    font-size: var(--fs-main-heading);
+    line-height: 1.1;
+    color: var(--main-heading-color);
+    font-weight: 400;
+    margin-top: 0;
+}
+
+h1 span,
+.section-heading span {
+    font-family: var(--font-heading);
+    font-style: italic;
+    color: #1d9e75;
+    font-size: 36px;
+}
+
+.section-subheading {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+    font-family: var(--font-body);
+}
