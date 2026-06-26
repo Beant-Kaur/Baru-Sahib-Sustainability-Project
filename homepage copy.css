@@ -1122,7 +1122,280 @@ re .footer-col ul li {
     color: var(--white-color);
 }
 
+ :root {
+      --bg-color: #FBF9F6;
+      --text-main: #2d3748;
+    }
 
+/* 
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--bg-color);
+      display: flex;
+      justify-content: flex-end; /* Align right to simulate hero section placement */
+      /* align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+      padding-right: 5%; /* Padding from the right edge */
+    } */ */
+
+    /* COMPONENT STYLES - Copy these to your stylesheet */
+    .sdg-wheel-component {
+      position: relative;
+      width: 100%;
+      max-width: 650px; 
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #sdg-wheel-svg {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.03));
+    }
+
+    /* Central Stats Circle */
+    .wheel-center-content {
+      position: relative;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      width: 42%;
+      height: 42%;
+      border-radius: 50%;
+      z-index: 10;
+      pointer-events: none;
+      box-shadow: inset 0 2px 10px rgba(0,0,0,0.02);
+    }
+
+    .wheel-center-stat {
+      font-size: clamp(20px, 3vw, 36px);
+      font-weight: 800;
+      color: #0c2d48;
+      line-height: 1;
+      margin-bottom: 2%;
+    }
+
+    .wheel-center-text {
+      font-size: clamp(10px, 1.2vw, 18px);
+      font-weight: 800;
+      color: #0c2d48;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .wheel-center-divider {
+      width: 20%;
+      height: 2px;
+      background-color: #4C9F38;
+      margin: 4% 0;
+    }
+
+    .wheel-center-percent {
+      font-size: clamp(14px, 1.8vw, 22px);
+      font-weight: 800;
+      color: #4C9F38;
+      line-height: 1;
+    }
+
+    /* SVG Hover Dynamics */
+    .sdg-segment {
+      cursor: pointer;
+      transform-origin: 450px 450px; /* Center of SVG viewBox */
+      transition: opacity 0.3s ease, filter 0.3s ease;
+    }
+    
+    .sdg-path {
+      transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+      stroke: var(--bg-color);
+      stroke-width: 4px;
+    }
+
+    .sdg-segment:hover .sdg-path, 
+    .sdg-segment.active-hover .sdg-path {
+      transform: scale(1.04);
+      filter: drop-shadow(0 8px 16px rgba(0,0,0,0.15)) brightness(1.05);
+      stroke-width: 2px;
+    }
+    
+    .sdg-segment:hover .sdg-icon,
+    .sdg-segment.active-hover .sdg-icon {
+      transform: scale(1.08);
+    }
+
+    .sdg-segment.dimmed {
+      opacity: 0.35 !important;
+      filter: grayscale(0.6);
+    }
+
+    /* Small Floating KPI Card (Right Side) */
+    .kpi-info-card {
+      position: absolute;
+      right: -30px; /* Floats off the right side of the wheel */
+      bottom: 20px;
+      width: 280px;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 16px;
+      padding: 1.25rem;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08), 0 5px 15px rgba(0,0,0,0.03);
+      opacity: 0;
+      transform: translateY(15px) scale(0.95);
+      transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+      pointer-events: none;
+      z-index: 20;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .kpi-info-card.active {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: auto;
+    }
+
+    .kpi-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .kpi-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: 800;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .kpi-title-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .kpi-subtitle {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+
+    .kpi-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin: 0;
+      line-height: 1.2;
+      color: #1a202c;
+    }
+
+    .kpi-desc {
+      font-size: 0.85rem;
+      color: #4a5568;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .kpi-section {
+      background: #f7fafc;
+      padding: 0.75rem;
+      border-radius: 8px;
+      font-size: 0.8rem;
+    }
+
+    .kpi-section strong {
+      display: block;
+      color: #2d3748;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+    
+    .kpi-section span {
+      color: #4a5568;
+      line-height: 1.4;
+      display: block;
+    }
+
+    .kpi-esg {
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+
+    /* Default instructions overlay */
+    .kpi-default {
+      position: absolute;
+      right: 0;
+      bottom: 20px;
+      background: rgba(255,255,255,0.9);
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #4a5568;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+      z-index: 15;
+    }
+    
+    .kpi-default.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    @media (max-width: 1200px) {
+      .kpi-info-card {
+        right: 0;
+        bottom: 0;
+      }
+    }
+    @media (max-width: 768px) {
+      .sdg-wheel-component { max-width: 500px; }
+      .kpi-info-card {
+        right: auto;
+        left: 50%;
+        bottom: -20px;
+        transform: translate(-50%, 15px) scale(0.95);
+        width: 90%;
+      }
+      .kpi-info-card.active {
+        transform: translate(-50%, 0) scale(1);
+      }
+      .kpi-default {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+      }
+    }
 
 
 
