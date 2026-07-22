@@ -49,6 +49,7 @@ body {
     box-sizing: border-box;
     padding: 0 20px;
 }
+
 .section-title {
     text-align: center;
     margin-bottom: 20px;
@@ -107,11 +108,288 @@ h1 span,
 
 .section {
     width: 100%;
-    padding-top: 74px ;
+    padding-top: 74px;
     background: #f8fbfa;
     margin-bottom: 4%;
 }
 
+.impact-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    background: var(--background);
+}
 
+.impact-metric {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 1rem;
+}
 
+.metric-cat {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 12px;
+}
 
+.metric-num {
+    font-family: var(--font-heading);
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    color: var(--black-color);
+    line-height: 1;
+}
+
+.metric-desc {
+    font-size: 13px;
+    color: #666;
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+.table-wrapper {
+    width: 100%;
+    margin:40px 0;
+    border: 1px solid #ECEBE5;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .04), 0 16px 32px rgba(0, 0, 0, .05);
+}
+
+.initiative-table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+    background: #fff;
+    font-family: "DM Sans", sans-serif;
+}
+
+.initiative-table thead th {
+    padding: 18px 24px;
+    text-align: left;
+    font-size: 14.5px;
+    line-height: 1.4;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: #1A1A18;
+    border-bottom: 1px solid #ECEBE5;
+    white-space: nowrap;
+    margin-top:2rem;
+}
+
+.initiative-table thead th:first-child {
+    border-top-left-radius: 18px;
+}
+
+.initiative-table thead th:last-child {
+    border-top-right-radius: 18px;
+}
+
+/* ===========================
+   TABLE ROWS
+=========================== */
+.initiative-table tbody tr {
+    border-bottom: 1px solid #ECEBE5;
+    transition: background-color .2s ease;
+}
+
+.initiative-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.initiative-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 18px;
+}
+
+.initiative-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 18px;
+}
+
+.initiative-table tbody tr:hover {
+    background: #FAFAF7;
+}
+
+.initiative-table td {
+    padding: 18px 24px;
+    color: #1A1A18;
+    font-size: 14.5px;
+    line-height: 1.4;
+    vertical-align: middle;
+}
+
+/* ===========================
+   INITIATIVE NAME
+=========================== */
+.initiative-table td:first-child {
+    font-weight: 600;
+    letter-spacing: -.01em;
+    width: 26%;
+}
+
+/* ===========================
+   CATEGORY COLUMN
+=========================== */
+.initiative-table td:nth-child(3) {
+    color: #6b6b65;
+    font-size: 13.5px;
+    font-weight: 500;
+}
+
+/* ===========================
+   SDG BADGES
+=========================== */
+.initiative-table td:nth-child(2) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+}
+
+.sdg-tag {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    background: #1D9E75;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* ===========================
+   PROGRESS COLUMN
+=========================== */
+.progress-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.progress-bar {
+    width: 150px;
+    height: 5px;
+    background: #ECEBE5;
+    border-radius: 100px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 100px;
+    transition: width .4s ease;
+}
+
+/* Progress Colors */
+.green {
+    background: #4CAF50;
+}
+
+.teal {
+    background: #1D9E75;
+}
+
+.orange {
+    background: #FB923C;
+}
+
+.blue {
+    background: #60A5FA;
+}
+
+.purple {
+    background: #A78BFA;
+}
+
+.yellow {
+    background: #F5A623;
+}
+
+/* Progress Text */
+.progress-wrapper span {
+    color: #8A8A82;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* ===========================
+   STATUS BADGES
+=========================== */
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: .01em;
+    white-space: nowrap;
+}
+
+.status::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    flex-shrink: 0;
+}
+
+/* Green */
+.status-green {
+    background: #E1F5E8;
+    color: #1D9E75;
+}
+
+/* Blue */
+.status-blue {
+    background: #DFEEFC;
+    color: #1470B8;
+}
+
+/* Purple */
+.status-purple {
+    background: #EFE9FB;
+    color: #7C5AC7;
+}
+
+/* Orange */
+.status-orange {
+    background: #FDECDA;
+    color: #E8572A;
+}
+
+/* Teal */
+.status-teal {
+    background: #E1F5F0;
+    color: #0F6E56;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 900px) {
+    .progress-bar {
+        width: 100px;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .initiative-table td,
+    .initiative-table thead th {
+        padding: 14px 16px;
+    }
+
+    .progress-wrapper span {
+        display: none;
+    }
+}
