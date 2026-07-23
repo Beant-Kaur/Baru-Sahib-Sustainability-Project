@@ -39,7 +39,7 @@ body {
     margin: 0;
     padding: 0;
     background: #f9f8f5;
-    color: #6b6b65;
+    color:var(--text-color);
 }
 
 .container {
@@ -102,57 +102,83 @@ h1 span,
     margin: 0 auto;
     font-size: 16px;
     line-height: 1.8;
-    color: #666;
+    color:var(--text-color);
     font-family: var(--font-body);
+    padding-bottom:30px;
 }
 
 .section {
     width: 100%;
-    padding-top: 74px;
+    padding-top: 60px;
     background: #f8fbfa;
-    margin-bottom: 4%;
+    margin-bottom: 2%;
 }
 
 .impact-metrics {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
-    background: var(--background);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 10px;
+    margin: 2.5rem;
 }
 
 .impact-metric {
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 1rem;
+    position: relative;
+    background: #fff;
+    border: 1px solid #ECEBE5;
+    border-radius: 18px;
+    padding: 24px;
+    transition: all 0.3s ease;
+    margin:0 1rem
 }
 
+
+.impact-metric:hover {
+    border-color: var(--text-color);
+    background: #FCFCFA;
+    box-shadow: 0 10px 24px rgba(35, 61, 77, 0.08);
+}
 .metric-cat {
     font-size: 11px;
-    letter-spacing: 0.08em;
     text-transform: uppercase;
-    opacity: 0.8;
-    margin-bottom: 12px;
+    letter-spacing: .12em;
+    font-weight: 600;
+    color: var(--font-color);
+    margin-bottom: 14px;
 }
 
 .metric-num {
+    display: flex;
+    align-items: baseline;
+    gap: 3px;
     font-family: var(--font-heading);
-    font-size: var(--fs-sm);
-    font-weight: 500;
-    color: var(--black-color);
+    font-size: 1.8rem;        
+    font-weight: 550;
     line-height: 1;
+    color:var(--main-heading-color);
 }
-
+.metric-unit {
+    font-size: 0.95rem ;
+    color: #FE7F2D;
+    font-weight: 600;
+}
 .metric-desc {
-    font-size: 13px;
-    color: #666;
-    margin-top: 8px;
-    line-height: 1.5;
+    margin-top: 14px;
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--text-color);
 }
 
+@media (max-width:768px){
+    .impact-metric{
+        padding:20px;
+    }
+    .metric-num{
+        font-size:1.8rem;
+    }
+}
 .table-wrapper {
     width: 100%;
-    margin:40px 0;
+    margin: 40px 0;
     border: 1px solid #ECEBE5;
     border-radius: 18px;
     background: #fff;
@@ -164,7 +190,7 @@ h1 span,
     min-width: 760px;
     border-collapse: collapse;
     background: #fff;
-    font-family: "DM Sans", sans-serif;
+    font-family: var(--font-body);
 }
 
 .initiative-table thead th {
@@ -175,10 +201,14 @@ h1 span,
     vertical-align: middle;
     text-transform: uppercase;
     letter-spacing: .1em;
-    color: #1A1A18;
+    color: var(--black-color);
     border-bottom: 1px solid #ECEBE5;
     white-space: nowrap;
-    margin-top:2rem;
+    margin-top: 2rem;
+}
+
+.progress-fill green {
+    width: 95%;
 }
 
 .initiative-table thead th:first-child {
@@ -189,9 +219,6 @@ h1 span,
     border-top-right-radius: 18px;
 }
 
-/* ===========================
-   TABLE ROWS
-=========================== */
 .initiative-table tbody tr {
     border-bottom: 1px solid #ECEBE5;
     transition: background-color .2s ease;
@@ -215,33 +242,23 @@ h1 span,
 
 .initiative-table td {
     padding: 18px 24px;
-    color: #1A1A18;
+    color: var(--black-color);
     font-size: 14.5px;
     line-height: 1.4;
     vertical-align: middle;
 }
 
-/* ===========================
-   INITIATIVE NAME
-=========================== */
 .initiative-table td:first-child {
     font-weight: 600;
     letter-spacing: -.01em;
     width: 26%;
 }
 
-/* ===========================
-   CATEGORY COLUMN
-=========================== */
 .initiative-table td:nth-child(3) {
-    color: #6b6b65;
+    color: var(--text-color);
     font-size: 13.5px;
     font-weight: 500;
 }
-
-/* ===========================
-   SDG BADGES
-=========================== */
 .initiative-table td:nth-child(2) {
     display: flex;
     flex-wrap: wrap;
@@ -256,15 +273,11 @@ h1 span,
     width: 28px;
     height: 28px;
     border-radius: 7px;
-    background: #1D9E75;
-    color: white;
+    background: var(--font-color);
+    color:var(--background);
     font-size: 12px;
     font-weight: 700;
 }
-
-/* ===========================
-   PROGRESS COLUMN
-=========================== */
 .progress-wrapper {
     display: flex;
     align-items: center;
@@ -311,17 +324,12 @@ h1 span,
     background: #F5A623;
 }
 
-/* Progress Text */
 .progress-wrapper span {
-    color: #8A8A82;
+    color: var(--text-color);
     font-size: 13px;
     font-weight: 500;
     white-space: nowrap;
 }
-
-/* ===========================
-   STATUS BADGES
-=========================== */
 .status {
     display: inline-flex;
     align-items: center;
@@ -343,39 +351,31 @@ h1 span,
     flex-shrink: 0;
 }
 
-/* Green */
 .status-green {
     background: #E1F5E8;
     color: #1D9E75;
 }
 
-/* Blue */
 .status-blue {
     background: #DFEEFC;
     color: #1470B8;
 }
 
-/* Purple */
 .status-purple {
     background: #EFE9FB;
     color: #7C5AC7;
 }
 
-/* Orange */
 .status-orange {
     background: #FDECDA;
     color: #E8572A;
 }
 
-/* Teal */
 .status-teal {
     background: #E1F5F0;
     color: #0F6E56;
 }
 
-/* ===========================
-   RESPONSIVE
-=========================== */
 @media (max-width: 900px) {
     .progress-bar {
         width: 100px;
@@ -393,3 +393,59 @@ h1 span,
         display: none;
     }
 }
+  .card {
+    max-width: 1200px;
+    margin: 2rem 0;
+    background:#E1F5E8 ;
+    border-radius: 20px;
+    padding: 40px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .card__text h2 {
+    margin: 0 0 10px 0;
+    font-family: var(--font-heading);
+    font-weight: 550;
+    font-size: 28px;
+    color:var(--black-color)
+  }
+
+  .card__text p {
+    margin: 0;
+    font-size: 16px;
+    color: var(--text-color);
+  }
+
+  .card__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    background: #e8823a;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 16px 28px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .card__button:hover {
+    background: #d9722a;
+  }
+
+  @media (max-width: 640px) {
+    .card {
+      padding: 32px;
+    }
+    .card__text h2 {
+      font-size: 22px;
+    }
+  }
