@@ -136,6 +136,7 @@ p {
     margin: 0;
     padding: 0;
 }
+
 .nav-links a {
     text-decoration: none;
     color: var(--text-color);
@@ -145,8 +146,8 @@ p {
 }
 
 .nav-links a:hover {
-     color: var(--span-color);
-    font-weight: 600; 
+    color: var(--span-color);
+    font-weight: 600;
 }
 
 .btn-register {
@@ -156,6 +157,7 @@ p {
     border-radius: 999px;
     font-weight: 600;
 }
+
 .btn-register:hover {
     background: var(--dark-green-color);
 }
@@ -167,12 +169,43 @@ p {
 }
 
 @media (max-width:768px) {
+
     .menu-btn {
         display: block;
     }
 
     .nav-links {
         display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        width: 220px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: black;
+        display: block;
+        padding: 10px;
+    }
+
+    .nav-links a:hover {
+        background: #1D9E75;
+        color: white;
+        border-radius: 6px;
     }
 }
 
@@ -513,12 +546,12 @@ h1 span {
 
 .portal-cards1 {
     display: grid;
-    justify-content: center;
+    /* justify-content: center; */
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    margin: 10px;
+    margin: 0 auto;
     /* margin-top: 6%; */
-    padding: 20px
+    padding: 0 50px; 
 }
 
 .portal-card1 {
@@ -531,18 +564,22 @@ h1 span {
     /* width: 100%; */
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(35, 61, 77, 0.05);
-    /* padding:20px; 
-    margin:30px;  */
-}
-
-
-
+    padding: 20px;
+    /* margin:30px;  */
+  }
 .portal-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 35px rgba(35, 61, 77, 0.12);
 }
-
-
+@media (max-width: 425px) {
+    .portal-cards1{
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width:768px){
+    .portal-cards1{
+        grid-template-columns:repeat(2,1fr);
+}}
 .card-banner {
     display: flex;
     justify-content: center;
@@ -620,7 +657,7 @@ h1 span {
     gap: 8px;
     text-decoration: none;
     padding: 14px 24px;
-    border-radius: 999px;
+    border-radius: 3rem;
     background: var(--span-color);
     color: white;
     font-size: var(--fs-body);
@@ -647,10 +684,10 @@ h1 span {
     color: #233D4D;
 }
 
-.secondary-btn:hover {
+/* .secondary-btn:hover {
     background: #233D4D;
     color: white;
-}
+} */
 
 /* Achievements  */
 .achievement-cards {
@@ -727,7 +764,7 @@ h1 span {
 .main-page-project-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 2rem;
     margin-top: 50px;
 }
 
@@ -738,7 +775,7 @@ h1 span {
     background: #ffffff;
     border: 1px solid #e6e6e6;
     border-radius: 18px;
-    padding: 24px;
+    padding: 1rem;
     transition: all 0.3s ease;
 }
 
@@ -746,7 +783,7 @@ h1 span {
 .main-page-project-card {
     display: flex;
     flex-direction: column;
-    background: #ffffff;
+    background:var(--border);
     border: 1px solid rgba(35, 61, 77, 0.08);
     border-radius: 24px;
     overflow: hidden;
@@ -1013,12 +1050,6 @@ h1 span {
     transform: translateY(-10px);
 }
 
-/* 2nd card white */
-.partnership-cards-model:hover {
-    background-color: white;
-    color: black;
-}
-
 /* last-section */
 .last-section {
     border-radius: 20px;
@@ -1027,12 +1058,22 @@ h1 span {
     margin: 50px 50px;
 }
 
-.space {
-    margin: 30px 60px 0px 0px;
+@media (max-width: 992px) {
+    .main-page-project-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.portal-card1 {
-    padding: 20px;
+@media(max-width:498px){
+    .section-title{
+        font-size: var(--fs-sm);
+        color:red
+    }
+}
+
+
+.space {
+    margin: 30px 60px 0px 0px;
 }
 
 /* Footer */
@@ -1122,10 +1163,45 @@ re .footer-col ul li {
     color: var(--white-color);
 }
 
+@media (max-width:1024px) {}
 
+@media (max-width:768px) {
+    .hero-container {
+        display: flex;
+        flex-direction: column;
+    }
 
+    .hero-left {
+        text-align: center;
+    }
 
+    .hero-right {
+        margin-top: 30px;
+    }
 
+    .hero-right img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media(max-width:992px) {
+    .portal-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:768px) {
+    .portal-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+.portal-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
 
 

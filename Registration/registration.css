@@ -182,15 +182,15 @@ section{
     margin-bottom: 32px;
 }
 
-section > label{
+section label{
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 15px;    
 }
 
 .type-options{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    gap: 20px;
 }
 
 .type-card{
@@ -208,10 +208,6 @@ section > label{
     transform: translateY(-3px);
 }
 
-.type-card.selected{
-    border: 2px solid var(--dark-green-color);
-    background: var(--white);
-}
 
 .type-icon{
     font-size: 28px;
@@ -318,4 +314,11 @@ textarea{
     .section-subheading{
         font-size: var(--fs-sm);
     }
+}
+.type-card.selected{
+    border: 2px solid var(--font-color);
+    background-color: rgba(29,158,117,0.08);
+}
+.partner-radio{
+    display:none;
 }
