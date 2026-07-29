@@ -69,6 +69,7 @@ p {
     margin-bottom: 40px;
     margin-top: 8%
 }
+
 .second {
     text-align: center;
     margin-bottom: 40px;
@@ -81,7 +82,7 @@ p {
     align-items: center;
     gap: 12px;
     margin-bottom: 8px;
-    margin-top:0
+    margin-top: 0
 }
 
 .section-eyebrow span {
@@ -107,13 +108,16 @@ p {
     line-height: 1.1;
     color: var(--main-heading-color);
     font-weight: 400;
-    margin:6px;
+    margin: 6px;
 
 }
-.background{
-        background: #f9f8f7;;
- ;
+
+.background {
+    background: #f9f8f7;
+    ;
+    ;
 }
+
 h1 span,
 .section-heading span {
     font-family: var(--font-heading);
@@ -132,9 +136,9 @@ h1 span,
 }
 
 .network-body {
-    padding: 12px ;
-    padding-left:12px;
-    padding-right:0;
+    padding: 12px;
+    padding-left: 12px;
+    padding-right: 0;
     background: #f9f8f7;
     display: grid;
     grid-template-columns: 1.3fr .5fr;
@@ -249,27 +253,13 @@ sup {
 
 }
 
-@media(max-width:576px) {
-    .stat-card {
-        padding: 18px;
-    }
-    .stat-icon {
-        width: 55px;
-        height: 55px;
-        font-size: 22px;
-    }
-    .stat-num-lg {
-        font-size: 26px;
-    }
-    .stat-lbl {
-        font-size: 15px;
-    }
-}
+
 .partners-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
+
 .partner-card {
     background: var(--white);
     border: 1px solid var(--border);
@@ -278,38 +268,45 @@ sup {
     text-align: center;
     transition: all 0.3s ease;
 }
+
 .partner-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 30px rgba(29, 158, 117, 0.15);
     border-color: var(--span-color);
 }
+
 .partner-icon {
     font-size: 2.2rem;
     padding-bottom: 1px;
 }
+
 .partner-card h4 {
     color: var(--black-color);
     font-style: italic;
     font-size: 1.2rem;
     margin: 0
 }
+
 .partner-card p {
     font-size: 0.78rem;
     line-height: 1.65;
     padding: 0
 }
+
 .partner-card h4 {
     color: var(--black-color);
     font-size: 1.2rem;
     margin: 0;
 }
+
 .explore-more {
     display: flex;
     justify-content: center;
     flex-direction: row;
-       gap:30px;
-       padding-bottom:20px
+    gap: 30px;
+    padding-bottom: 20px
 }
+
 .btn-explore {
     display: inline-flex;
     font-family: var(--font-body);
@@ -324,7 +321,121 @@ sup {
     font-weight: 600;
     /* margin: 30px; */
 }
- .background{
-             background: rgb(234, 246, 234);
-             border-radius: 20px;             
+
+.background {
+    background: rgb(234, 246, 234);
+    border-radius: 20px;
 }
+
+@media (max-width:768px) {
+
+    .section-heading {
+        font-size: 30px;
+    }
+
+    .section-heading span {
+        font-size: 30px;
+    }
+
+    .section-subheading {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .section-title {
+        margin-top: 90px;
+        margin-bottom: 30px;
+    }
+
+    .network-diagram {
+
+        max-width: 500px;
+        margin: auto;
+    }
+
+        .partner-card {
+
+        padding: 18px;
+
+    }
+
+    .partner-card h4 {
+
+        font-size: 20px;
+    }
+
+    .partner-card p {
+
+        font-size: 14px;
+    }
+
+    .footer-brand-desc {
+        align-self: center;
+    }
+}
+
+
+@media (max-width:992px) {
+
+    .network-body {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+  
+}
+
+@media(max-width:480px) {
+
+    .btn-explore {
+
+        width: 100%;
+        justify-content: center;
+        padding: 14px;
+
+    }
+
+}
+
+@media(max-width:426px) {
+       .impact-strip {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .stat-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 18px;
+        margin: 0;
+        min-height: 160px;
+
+        gap: 12px;
+    }
+
+    .stat-icon {
+        font-size: 2.5rem;
+    }
+
+    .stat-num-lg {
+        font-size: var(--fs-md);
+        font-weight: 700;
+    }
+
+    .stat-lbl {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .stat-sub-lbl {
+        font-size: 0.9rem;
+
+}
+.partners-grid {
+   display: grid;
+    grid-template-columns:100%;
+    gap: 20px;
+}}
