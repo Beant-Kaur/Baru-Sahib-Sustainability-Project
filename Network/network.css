@@ -72,8 +72,8 @@ p {
 
 .second {
     text-align: center;
-    margin-bottom: 40px;
-    margin-top: 4%
+    padding:1rem;
+    margin: 2% 0 
 }
 
 .section-eyebrow {
