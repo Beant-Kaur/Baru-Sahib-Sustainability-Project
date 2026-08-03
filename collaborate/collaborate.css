@@ -211,9 +211,6 @@ h1 span,
     margin-bottom: 315px;
 
 }
-
-/* 2 */
-/* for black to white text */
 .partnership-card:hover h3,
 .partnership-card:hover p,
 .partnership-card:hover li,
@@ -222,32 +219,27 @@ h1 span,
     color: black;
 }
 
-/* for border-color */
 .partnership-card:hover .partnership-features li,
 .partnership-card:hover .partnership-features1 li {
     border-bottom-color: rgba(255, 255, 255, 0.2);
 }
 
-/* for check icon color */
 .partnership-card:hover .list-check {
     background: white;
     color: black;
 }
 
-/* for hover effect */
 .partnership-card:hover {
     background: #eaf6ea;
     color: black;
     transform: translateY(-10px);
 }
 
-/* 2nd card white */
 .partnership-cards-model:hover {
     background-color: white;
     color: black;
 }
 
-/* last-section */
 .last-section {
     border-radius: 20px;
     padding: 30px;
@@ -277,9 +269,6 @@ h1 span,
     font-size: var(--fs-body);
     font-weight: 600;
     transition: all 0.3s ease;
-
-    /* margin-top: auto; */
-
 }
 
 #explore-id {

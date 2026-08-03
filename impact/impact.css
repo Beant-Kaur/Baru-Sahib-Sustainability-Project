@@ -27,8 +27,6 @@
     --fs-xs: 12px;
     --fs-xxl: 46px;
     --fs-lg: 18px;
-
-
     --blue-color: #1470B8;
     --blue-bg: #DFEEFC;
     --purple-color: #7C5AC7;
@@ -152,10 +150,14 @@ h1 span {
 }
 
 .impact-metric {
+    display:flex;
+    flex-direction:column;
     position: relative;
     background: var(--background);
     border: 1px solid #ECEBE5;
     border-radius: 18px;
+        align-items:center;
+
     padding: clamp(16px, 2vw, 24px);
     transition: all 0.3s ease;
 }
@@ -217,8 +219,6 @@ h1 span {
         0 2px 10px rgba(0, 0, 0, 0.04),
         0 16px 32px rgba(0, 0, 0, 0.05);
 }
-
-
 .initiative-table {
     width: 100%;
     min-width: 700px;
@@ -498,7 +498,7 @@ h1 span {
 }
 
 .card__button:hover {
-    background: #d9722a;
+    background:var(--dark-green-color);
 }
 
 
@@ -522,7 +522,6 @@ h1 span {
         width: 100%;
         padding: 0 15px;
     }
-
     .section {
         padding-top: 40px;
     }

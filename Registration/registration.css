@@ -31,7 +31,6 @@
 
 html {
     font-family: var(--font-body);
-    /* stops mobile browsers auto-zooming text and keeps scaling smooth */
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
 }
@@ -43,7 +42,6 @@ body {
     padding: 0;
     background: #f9f8f5;
     color: var(--text-color);
-    /* kills sideways scroll on small screens if anything overflows */
     overflow-x: hidden;
 }
 
@@ -56,13 +54,11 @@ body {
     max-width: 1100px;
     margin: 0 auto;
     box-sizing: border-box;
-    /* fluid side padding instead of a fixed jump at breakpoints */
     padding: 0 clamp(16px, 4vw, 20px);
 }
 
 .section-title {
     text-align: center;
-    /* margin-bottom: 20px; */
     margin-top: 3rem;
 }
 
@@ -145,7 +141,7 @@ h1 span,
 .field {
     display: flex;
     flex-direction: column;
-    min-width: 0; /* prevents inputs from forcing horizontal overflow in a grid */
+    min-width: 0; 
 }
 
 label {
@@ -174,7 +170,6 @@ textarea {
     font-size: var(--fs-sm);
     font-family: var(--font-body);
     transition: .3s;
-    /* keeps iOS from auto-zooming into the form on focus */
     font-size: max(16px, var(--fs-sm));
 }
 
@@ -303,16 +298,12 @@ textarea {
     padding: 0 8px;
 }
 
-/* ============ BREAKPOINTS ============ */
-
-/* Tablets */
 @media (max-width: 992px) {
     .type-options {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Large phones / small tablets */
 @media (max-width: 768px) {
     .row {
         grid-template-columns: 1fr;
@@ -343,7 +334,6 @@ textarea {
     }
 }
 
-/* Standard phones */
 @media (max-width: 480px) {
     .form-wrap {
         padding: 0 8px;
@@ -375,7 +365,6 @@ textarea {
     }
 }
 
-/* Very small / older small phones (e.g. SE, 360px devices) */
 @media (max-width: 360px) {
     .container,
     .form-wrap {

@@ -27,8 +27,6 @@
     --fs-xs: 12px;
     --fs-xxl: 46px;
     --fs-lg: 18px;
-
-
 }
 
 html {
@@ -51,8 +49,6 @@ p {
     color: var(--text-color);
 }
 
-
-
 .container {
     width: 100%;
     max-width: 1100px;
@@ -67,7 +63,6 @@ p {
 
 .section-title {
     text-align: center;
-    
 }
 
 .section-eyebrow {
@@ -117,7 +112,7 @@ h1 span,
     margin: 0 auto;
     font-size: clamp(14px, 2.2vw, 16px);
     line-height: 1.8;
-    color: #666;
+    color: var(--text-color);
     font-family: var(--font-body);
 }
 
@@ -125,8 +120,6 @@ h1 span,
     height: 30px;
     width: 30px;
 }
-
-
 
 .Ecosystem-items {
     display: flex;
@@ -156,7 +149,6 @@ h1 span,
 
 .diagram-layout {
     justify-items: center;
-
     align-self: flex-start;
     border: 1px solid #E8572A;
 }
@@ -221,7 +213,6 @@ h1 span,
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    
 }
 
 .btn-explore {
@@ -235,7 +226,6 @@ h1 span,
     font-size: var(--fs-body);
     font-weight: 600;
     margin: 30px 10px;
-
 }
 
 .btn-explore:hover {
@@ -306,7 +296,6 @@ h1 span,
 
 #background {
     background: #eaf6ea;
-    
 }
 
 .sdg-grid {
@@ -316,7 +305,6 @@ h1 span,
     justify-content: center;
     margin: 6px 0;
     padding: 20px 0;
-
 }
 
 .sdg-badge {
@@ -339,7 +327,6 @@ h1 span,
     box-shadow: 0 2px 8px rgba(29, 158, 117, 0.15);
 }
 
-
 .quote-band {
     background: var(--background);
     border-top: 0.5px solid #d8d6cf;
@@ -360,7 +347,6 @@ h1 span,
     margin: 0 auto;
 }
 
-
 .site-footer {
     background: var(--span-color);
     padding: 28px;
@@ -372,7 +358,6 @@ h1 span,
     gap: 48px;
     color: var(--white-color);
     margin-left: 40px;
-    
 }
 
 .footer-brand-name {
@@ -405,7 +390,6 @@ h1 span,
     text-transform: uppercase;
     color: var(--white-color);
     margin-bottom: 16px;
-    
 }
 
 .footer-col ul {
@@ -435,7 +419,6 @@ h1 span,
     padding-top: 24px;
     display: flex;
     justify-content: space-between;
-    
     align-items: center;
     font-size: 0.75rem;
     color: var(--white-color);
@@ -454,15 +437,11 @@ h1 span,
     gap: 24px;
 }
 
-
-
-
 @media (max-width: 1200px) {
     .container {
         max-width: 960px;
     }
 }
-
 
 @media(max-width:992px) {
     .eco-grid {
@@ -480,20 +459,21 @@ h1 span,
     }
 }
 
+@media (max-width:768px) {
+    .eco-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        padding: 10px
+    }
 
-@media (max-width:768px) {  
-        .eco-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap:10px;
-            padding:10px
-        }
-        .eco-grid {
+    .eco-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-      .nav {
+
+    .nav {
         padding: 16px 20px;
     }
 
@@ -504,9 +484,10 @@ h1 span,
     .nav-links {
         display: none;
     }
-    .buttons{
-        margin:0;
-        gap:10px
+
+    .buttons {
+        margin: 0;
+        gap: 10px
     }
 
     .container {
@@ -559,7 +540,6 @@ h1 span,
     margin: 0 auto 16px;
 }
 
-
 .eco-card {
     background: var(--background);
     border: 1.5px solid var(--border);
@@ -595,7 +575,6 @@ h1 span,
     text-transform: uppercase;
     font-weight: 600;
     color: var(--dark-green-color);
-    
 }
 
 .eco-icon {
@@ -704,33 +683,35 @@ sup {
     box-shadow: 0 4px 12px rgba(35, 61, 77, 0.05);
 }
 
-
 @media (max-width:600px) {
-.eco-grid{
-    display:flex;
-    flex-direction: column;
-    width:100%;
+    .eco-grid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
-    .eco-metrics{
-        display:flex;
-        flex-direction:column !important;
-        padding:8px;
-        gap:.2rem;
-        width:100%
+
+    .eco-metrics {
+        display: flex;
+        flex-direction: column !important;
+        padding: 8px;
+        gap: .2rem;
+        width: 100%
     }
-    .buttons{
-        margin:1rem;
-        display:flex;
-        flex-direction:column;
-        gap:0;
+
+    .buttons {
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
         align-items: center;
     }
-.btn-explore{
-    margin:1rem;
-    width: 55%;
-    text-align: center;
-    justify-content: center;
-}
+
+    .btn-explore {
+        margin: 1rem;
+        width: 55%;
+        text-align: center;
+        justify-content: center;
+    }
 
     .footer-content {
         grid-template-columns: 1fr;
@@ -758,7 +739,6 @@ sup {
     }
 }
 
-
 @media (max-width:380px) {
     .eco-icon {
         font-size: 2rem;
@@ -782,10 +762,11 @@ sup {
         padding: 6px 12px;
     }
 }
+
 @media (max-width: 400px) {
     .section-title {
         margin-top: clamp(1.2rem, 6vw, 6rem);
         margin-bottom: 20px;
-            padding-top: 4%;
+        padding-top: 4%;
     }
 }

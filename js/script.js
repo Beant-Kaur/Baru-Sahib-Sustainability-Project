@@ -3,8 +3,7 @@ console.log("JavaScript Connected Successfully!");
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
 
-if (menuBtn && navLinks) {
-    menuBtn.onclick = function () {
+if (menuBtn && navLinks) {menuBtn.onclick = function () {
 
         navLinks.classList.toggle("active");
 
@@ -51,11 +50,10 @@ if (form) {
 
         const selectedProjects = [];
 
-        document
-            .querySelectorAll('input[name="projects"]:checked')
+        document.querySelectorAll('input[name="projects"]:checked')
             .forEach(function (project) {
                 selectedProjects.push(project.value);
-            });
+           });
 
         const formData = {
             fullName,

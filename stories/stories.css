@@ -270,9 +270,7 @@ h1 span,
     transition: all .3s ease;
     text-align: center;
 }
-.btn-explore,.btn-explore1{
-        width:60% !important
-}
+
 .btn-explore1:hover {
     font-weight: 600;
     background-color: #dfdfdf;
