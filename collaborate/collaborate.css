@@ -211,32 +211,22 @@ h1 span,
     margin-bottom: 315px;
 
 }
-.partnership-card:hover h3,
-.partnership-card:hover p,
-.partnership-card:hover li,
-.partnership-card:hover .partnership-label,
-.partnership-card:hover .partnership-price {
-    color: black;
-}
-
 .partnership-card:hover .partnership-features li,
 .partnership-card:hover .partnership-features1 li {
     border-bottom-color: rgba(255, 255, 255, 0.2);
 }
 
 .partnership-card:hover .list-check {
-    background: white;
+    /* background: white; */
     color: black;
 }
 
 .partnership-card:hover {
-    background: #eaf6ea;
     color: black;
     transform: translateY(-10px);
 }
 
 .partnership-cards-model:hover {
-    background-color: white;
     color: black;
 }
 
