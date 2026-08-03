@@ -727,7 +727,7 @@ sup {
     }
 .btn-explore{
     margin:1rem;
-    width: 85%;
+    width: 55%;
     text-align: center;
     justify-content: center;
 }
@@ -780,5 +780,12 @@ sup {
     .sdg-badge {
         font-size: 11px;
         padding: 6px 12px;
+    }
+}
+@media (max-width: 400px) {
+    .section-title {
+        margin-top: clamp(1.2rem, 6vw, 6rem);
+        margin-bottom: 20px;
+            padding-top: 4%;
     }
 }

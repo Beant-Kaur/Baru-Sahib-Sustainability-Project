@@ -142,7 +142,7 @@ nav {
 .footer-content {
     display: grid;
     grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr);
-    gap: 48px;
+    gap: 20px;
     color: var(--white-color);
     margin-left: 40px;
 }

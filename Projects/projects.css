@@ -141,9 +141,9 @@ h1 span,
 
 .section {
     width: 100%;
-    padding-top: 74px;
+    padding-top: 40px;
     background: #f8fbfa;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
 }
 
 .section-inner {
@@ -221,7 +221,7 @@ h1 span,
 .project-title {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
     min-width: 0;
 }
@@ -258,8 +258,8 @@ h1 span,
     justify-content: space-between;
     align-items: center;
     gap: 12px;
-    margin-top: 24px;
-    padding-top: 20px;
+    margin-top: 12px;
+    padding-top: 12px;
     border-top: 1px solid #ECEBE5;
 }
 
@@ -436,7 +436,6 @@ h1 span,
     .section-inner {
         width: 92%;
     }
-
     .project-card-header {
         flex-direction: column;
         font-size: var(--fs-s);
@@ -473,10 +472,9 @@ h1 span,
         padding: 20px;
         border-radius: 16px;
     }
-
     .project-card-header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 10px;
     }
 
@@ -500,7 +498,9 @@ h1 span,
 
     .btn-outline {
         text-align: center;
-        width: 100%;
+        width: 50%;
+        align-self:center;
+        padding:10px
     }
 
     .projects-cta {
@@ -523,7 +523,7 @@ h1 span,
 @media (max-width:380px) {
     .project-title,
     .status {
-        width: 100%;
+        width: 80%;
     }
 
     .project-full-card {

@@ -28,7 +28,7 @@
     --fs-xxl: 46px;
     --fs-lg: 18px;
 
-    
+
     --blue-color: #1470B8;
     --blue-bg: #DFEEFC;
     --purple-color: #7C5AC7;
@@ -225,14 +225,13 @@ h1 span {
     border-collapse: collapse;
     background: var(--background);
     font-family: var(--font-body);
-    margin: 0;                          
+    margin: 0;
 }
 
 
 .initiative-table thead {
-    background:var(--background);
-    color:var(--span-color)
-    
+    background: var(--background);
+    color: var(--span-color)
 }
 
 .initiative-table thead th {
@@ -243,7 +242,7 @@ h1 span {
     vertical-align: middle;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color:var(--dark-green-color);
+    color: var(--dark-green-color);
     border-bottom: 1px solid #ECEBE5;
     white-space: nowrap;
 }
@@ -328,7 +327,7 @@ h1 span {
     width: 28px;
     height: 28px;
     border-radius: 7px;
-    background: var(--font-color);      
+    background: var(--font-color);
     color: var(--background);
     font-size: var(--fs-xs);
     font-weight: 700;
@@ -366,27 +365,27 @@ h1 span {
 
 
 .green {
-    background: var(--green-color);     
+    background: var(--green-color);
 }
 
 .teal {
-    background: var(--seagreen-color);  
+    background: var(--seagreen-color);
 }
 
 .orange {
-    background: var(--orange-fill);     
+    background: var(--orange-fill);
 }
 
 .blue {
-    background: var(--blue-color);      
+    background: var(--blue-color);
 }
 
 .purple {
-    background: var(--purple-color);    
+    background: var(--purple-color);
 }
 
 .yellow {
-    background: var(--yellow-color);    
+    background: var(--yellow-color);
 }
 
 .progress-wrapper span {
@@ -421,27 +420,27 @@ h1 span {
 
 .status-green {
     background: #E1F5E8;
-    color: var(--seagreen-color);       
+    color: var(--seagreen-color);
 }
 
 .status-blue {
-    background: var(--blue-bg);         
-    color: var(--blue-color);           
+    background: var(--blue-bg);
+    color: var(--blue-color);
 }
 
 .status-purple {
-    background: var(--purple-bg);       
-    color: var(--purple-color);         
+    background: var(--purple-bg);
+    color: var(--purple-color);
 }
 
 .status-orange {
     background: #FDECDA;
-    color: var(--red-color);            
+    color: var(--red-color);
 }
 
 .status-teal {
     background: #E1F5F0;
-    color: var(--dark-green-color);     
+    color: var(--dark-green-color);
 }
 
 
@@ -485,13 +484,12 @@ h1 span {
     justify-content: center;
     gap: 8px;
     white-space: nowrap;
-    background: var(--red-color);       
+    background: var(--span-color);
     color: var(--white-color);
     font-weight: 700;
     font-size: var(--fs-body);
     text-decoration: none;
-    padding: 16px 28px;
-    min-height: 44px;
+    padding: 10px 20px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
@@ -573,13 +571,13 @@ h1 span {
 
     .status {
         padding: 6px 10px;
-        font-size: var(--fs-s);         
+        font-size: var(--fs-s);
     }
-}                                       
+}
 
 @media (max-width: 576px) {
     .impact-metrics {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .section-title {
@@ -591,6 +589,10 @@ h1 span {
 @media (max-width: 400px) {
     .progress-wrapper span {
         display: none;
+    }
+
+    .impact-metrics {
+        grid-template-columns: 1fr 1fr;
     }
 
     .section-title {

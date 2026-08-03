@@ -83,7 +83,7 @@ nav {
     letter-spacing: 0.1em;
     color: #1d9e75;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -572,7 +572,7 @@ h1 span {
     width: 48px;
     height: 48px;
     border-radius: 12px;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
 }
 
 .ecosystem-banner {
@@ -644,7 +644,8 @@ h1 span {
     }
 
     .card-banner {
-        margin: 0 auto 20px;
+        /* margin:20px 20px; */
+        align-self: center;
     }
 
     .card-tag {
@@ -658,7 +659,7 @@ h1 span {
         text-align: center;
     }
 
-    .partnership-content{
+    .partnership-content {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -685,6 +686,7 @@ h1 span {
     font-size: var(--fs-body);
     font-weight: 600;
     transition: all 0.3s ease;
+
 
     /* margin-top: auto; */
 
@@ -913,35 +915,6 @@ h1 span {
 
 /* Responsiveness */
 
-@media (max-width: 1200px) {
-    .main-page-project-cards {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 992px) {
-    .main-page-project-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-
-}
-
-@media (max-width: 768px) {
-    .main-page-project-cards {
-        grid-template-columns: 1fr;
-    }
-
-    .portal-card1 {
-        width: 100% !important;
-    }
-}
-
-#explore-id {
-    padding: 10px 18px;
-    margin-bottom: 2px !important
-}
-
 @media (max-width:425px) {
 
     .card-content {
@@ -976,6 +949,34 @@ h1 span {
     }
 }
 
+@media (max-width: 768px) {
+    .main-page-project-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .portal-card1 {
+        width: 50%;
+    }
+}
+
+#explore-id {
+    padding: 10px 18px;
+    margin-bottom: 2px !important
+}
+
+@media (max-width: 992px) {
+    .main-page-project-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1200px) {
+    .main-page-project-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 
 .quote-band {
@@ -1007,6 +1008,7 @@ h1 span {
     transition: all .5s;
     position: relative;
     overflow: hidden;
+    gap: 0
 }
 
 .partnership-label {
@@ -1021,16 +1023,17 @@ h1 span {
 .partnership-content h3 {
     font-family: var(--font-body);
     font-size: var(--fs-lg);
-    font-style: italic;
+    font-style: var(--font-accent);
     color: #1a1a18;
     font-weight: 600;
+    margin: 8px
 }
 
 .partner-paragraph {
     font-size: var(--fs-sm);
     color: var(--text-color);
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin: 8px
 }
 
 .partnership-features {
@@ -1119,7 +1122,7 @@ h1 span {
 
 
 .space {
-    margin: 20px 30px ;
+    margin: 20px 30px;
 }
 
 /* Footer */
@@ -1150,31 +1153,43 @@ h1 span {
 
 }
 
-@media (max-width:425px) {
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        margin-left: 0;
-        text-align: center;
-        gap: 25px;
+@media (max-width:428px) {
+    .main-page-project-cards {
+        display: grid;
+        grid-template-columns: 1fr !important;
+    }
+.hero-container {
+        gap: 0  !important
+    }
+}
+    #explore-id {
+        padding: 10px 18px;
+        margin-bottom:  20px !important;
     }
 
-    .footer-bottom {
-        flex-direction: column;
-        gap: 10px;
-        margin-left: 0;
-        text-align: center;
-    }
+.footer-content {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+    text-align: center;
+    gap: 25px;
+}
 
-    .footer-brand-desc {
-        max-width: 100%;
-    }
+.footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 0;
+    text-align: center;
+}
 
-    .card-btn {
-        width: 6rem;
-        margin: 20px auto;
-        position: relative;
-    }
+.footer-brand-desc {
+    max-width: 100%;
+}
+
+.card-btn {
+    width: 6rem;
+    margin: auto;
+    position: relative;
+}
 }
 
 .footer-brand-name {
@@ -1321,7 +1336,45 @@ re .footer-col ul li {
     }
 }
 
+@media (max-width: 428px) {
 
+    .portal-card1 {
+        width: 80%;
+        display: flex;
+    }
+
+    .hero-container {
+        text-align: center;
+    }
+
+    .map {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Map Image */
+    .mapImage {
+        width: 6%;
+        max-width: 280px;
+        height: auto;
+        margin: 0 auto 10px;
+        display: block;
+    }
+
+    /* Address */
+    .address {
+        width: 60%;
+        margin: 0 auto;
+        font-size: var(--fs-sm);
+        line-height: 1.5;
+        letter-spacing: 0.03em;
+        text-align: center;
+        text-transform: uppercase;
+        display: block;
+        word-break: break-word;
+    }
+}
 
 
 

@@ -74,7 +74,7 @@ img {
 .section-title {
     text-align: center;
     margin-bottom: 40px;
-    margin-top: 6rem;
+    margin-top: 8rem;
 }
 
 .section-eyebrow {
@@ -257,7 +257,7 @@ h1 span,
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 14px 30px;
+    padding: 10px 30px;
     background: var(--span-color);
     color: #fff;
     border: none;
@@ -270,7 +270,9 @@ h1 span,
     transition: all .3s ease;
     text-align: center;
 }
-
+.btn-explore,.btn-explore1{
+        width:60% !important
+}
 .btn-explore1:hover {
     font-weight: 600;
     background-color: #dfdfdf;
@@ -609,5 +611,5 @@ sup {
     }
 }
 .section-title {
-        margin-top: clamp(2.9rem, 6vw, 6rem);
+        margin-top: clamp(6.8rem, 6vw, 6rem);
         margin-bottom: 20px;}
